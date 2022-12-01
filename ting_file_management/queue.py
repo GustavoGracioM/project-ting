@@ -15,6 +15,6 @@ class Queue:
         return self._data.popleft()
 
     def search(self, index):
-        if len(self._data) == 1 and index == -1:
+        if index < 0:
             raise IndexError('deque index out of range')
         return self._data[index]
