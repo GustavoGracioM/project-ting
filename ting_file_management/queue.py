@@ -18,3 +18,6 @@ class Queue:
         if index < 0:
             raise IndexError('deque index out of range')
         return self._data[index]
+
+    def is_empty(self):
+        return not len(self._data)
